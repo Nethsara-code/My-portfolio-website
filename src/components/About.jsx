@@ -32,7 +32,7 @@ export default function About() {
         justifyContent: "space-between",
         padding: "0 9%",
         gap: "1rem",
-        background: "rgba(255, 253, 253, 1)",
+        background: "rgba(255, 255, 255, 1)",
       }}
     >
       {/* LEFT IMAGE */}
