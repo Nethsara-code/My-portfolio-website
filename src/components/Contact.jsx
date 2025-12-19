@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section id="contact">
-      <h2>Contact sold</h2>
+      <h2>Contact askjdaksdjg</h2>
       <input placeholder="Email" /><br /><br />
       <textarea placeholder="Message" /><br /><br />
       <button className="red-btn">Send</button>
