@@ -23,10 +23,10 @@ const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "service_1nhxnk5", // replace with your EmailJS service ID
-        "template_2mf2o06", // replace with your EmailJS template ID
+        "service_1nhxnk5", 
+        "template_2mf2o06", 
         formRef.current,
-        "gLGkqSUAO3BHMK2Xb" // replace with your EmailJS public key
+        "gLGkqSUAO3BHMK2Xb" 
       )
       .then(
         (result) => {
@@ -59,11 +59,56 @@ const ContactSection = () => {
   }, []);
 
   const socialLinks = [
-    { icon: <FaGithub />, url: "https://github.com/yourusername", color: "#fff" },
-    { icon: <FaFacebook />, url: "https://facebook.com/yourusername", color: "#1877f2" },
-    { icon: <FaInstagram />, url: "https://instagram.com/yourusername", color: "#e1306c" },
-    { icon: <FaLinkedin />, url: "https://linkedin.com/in/yourusername", color: "#0a66c2" },
+    { icon: <FaGithub />, url: "https://github.com/Nethsara-code", color: "#fff" },
+    { icon: <FaFacebook />, url: "https://www.facebook.com/share/17oFaHNM6j/", color: "#1877f2" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/rafa___x___?igsh=bmR2MGxlMGEwb3Jn", color: "#e1306c" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/hirusha-nethsara-a24612380", color: "#0a66c2" },
   ];
+<div
+  style={{
+    display: "flex",
+    gap: "2rem",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    marginTop: "3rem",
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0)" : "translateY(20px)",
+    transition: "opacity 1s ease 0.4s, transform 1s ease 0.4s",
+  }}
+>
+  {socialLinks.map((link, index) => (
+    <a
+      key={index}
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "60px",
+        height: "60px",
+        borderRadius: "50%",
+        fontSize: "1.8rem",
+        color: link.color,
+        background: "rgba(255,255,255,0.1)",
+        transition: "all 0.4s ease",
+        boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "scale(1.2)";
+        e.currentTarget.style.boxShadow = "0 8px 20px red";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "scale(1)";
+        e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
+      }}
+    >
+      {link.icon}
+    </a>
+  ))}
+</div>
+
 
   return (
     <section
