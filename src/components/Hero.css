@@ -1,0 +1,113 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-letters {
+  display: flex;
+  gap: 10rem;
+  font-size: 20rem;
+  font-weight: 800;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.line-red {
+  height: 6px;
+  background: #e10600;
+  margin-top: 1rem;
+}
+
+.line-black {
+  height: 6px;
+  background: #000000;
+  margin-top: 1rem;
+}
+
+.hero-profile {
+  width: 400px;
+  margin-top: 2rem;
+  z-index: 3;
+}
+
+/* HeroSocials position */
+.hero-socials {
+  position: absolute;
+  bottom: 2rem;
+  z-index: 3;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 1024px) {
+  .hero-letters {
+    font-size: 12rem;
+    gap: 5rem;
+  }
+
+  .hero-profile {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-letters {
+    flex-direction: column;
+    font-size: 8rem;
+    gap: 3rem;
+  }
+
+  .letter-row {
+    justify-content: center;
+  }
+
+  .hero-profile {
+    width: 200px;
+    margin-top: 1.5rem;
+  }
+
+  .hero-socials {
+    bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-letters {
+    font-size: 6rem;
+    gap: 2rem;
+  }
+
+  .hero-profile {
+    width: 150px;
+  }
+}
